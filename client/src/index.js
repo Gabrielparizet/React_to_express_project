@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import axios from 'axios';
 import reportWebVitals from './reportWebVitals';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const requestAPI = async () => {
+	try {
+		const res = await axios.get(`http://localhost:9000/testAPI`, {
+			headers: {},
+			params: {}
+		});
+        console.log(res)
+	} catch (err) {
+		console.log(err);
+	}
+};
+requestAPI();
 root.render(
   <React.StrictMode>
-    <App />
   </React.StrictMode>
 );
 
