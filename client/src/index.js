@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const requestAPI = async () => {
 	try {
-		const res = await axios.get(`http://localhost:9000/testAPI`, {
+		const res = await axios.get(`http://localhost:9000/connectMySql`, {
 			headers: {},
 			params: {}
 		});
